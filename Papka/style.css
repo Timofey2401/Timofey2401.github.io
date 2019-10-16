@@ -1,0 +1,73 @@
+body {
+	background-color: #202060;
+	margin: 0px;
+}
+
+h1 {
+	font-family: 'Montserrat Alternates', sans-serif;
+	color: #602080;
+}
+h2 {
+	font-family: 'Comfortaa', cursive;
+	color: #b030b0;
+
+}
+a {
+	text-decoration: none; 
+	font-family: 'Comfortaa', cursive;;
+	color: black;
+}
+div {
+	width: 50%;
+	margin: auto;
+	background-color: #202040;
+	padding: 50px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+#header {
+	background-color: #505bda;
+	max-height: 30px;
+}
+#rightArrow {
+	width: 50px;
+	height: 40px;
+	margin: 90%;
+	margin-top: 0%;
+
+}
+#leftArrow {
+	width: 50px;
+	height: 40px;
+	margin: 10%;
+	margin-top: -873px;
+	margin-left: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
