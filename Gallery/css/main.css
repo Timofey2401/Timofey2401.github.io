@@ -1,0 +1,87 @@
+/*Эти свойства применяются ко всем элементам*/
+* {
+	margin: 0;	/*Внешний отступ*/
+	padding: 0;	/*Внутренний отступ*/						
+	box-sizing: border-box;	/*Алгоритм расчета размеров*/
+	-webkit-box-sizing: border-box; /*То же самое, только для других браузеров*/
+	-moz-box-sizing: border-box; /*То же самое, только для других браузеров*/
+
+}
+
+body {
+	background-color: #eee;	/*Цвет фона всей страницы*/
+}
+/*Стили для элемента с id="main"*/
+#main {
+	background-color: #fff; /*Цвет фона для элемента с id="main"*/
+	margin: auto;	/*Одинаковые внешние отступы*/
+	display: flex;	/*Отображение элементов в строчку*/
+	width: 95%;		/*Ширина элемента с id="main"*/
+	max-width: 1000px;/*Максимальная ширина элемента с id="main"*/
+	box-shadow: 0 0 10px 1px rgba(0,0,0,0.3);	/*Тень объекта, rgba - указываем цвет и прозрачность*/
+	flex-wrap: wrap;							/*Правила переноса*/
+}
+/*Стили для элемента с class="item"*/
+.item {
+	width: 100%;
+	height: 100%;
+	background-position: center; /*Расположение фона по центр блока*/
+	background-size: 100% 100%;	/*Растягиваем фоновое изображение по ширине элемента*/
+	-moz-background-size: 100% 100%;/*Растягиваем фоновое изображение по ширине элемента только для других браузеров*/
+	-webkit-background-size: 100% 100%;	/*Растягиваем фоновое изображение по ширине элемента только для других браузеров*/
+	
+}
+
+h1 {
+	color: red;
+	font-family: 'Mansalva', cursive;
+}
+/*Стили для элемента с class="heading"*/
+.heading {
+	font-size: 48px;
+	text-align: center; /*Расположение текста по центру*/
+	width: 100%;
+	padding: 30px 0;	
+
+}
+
+.img-link {
+	display: block;
+	max-height: 265px;
+	max-width: 480px;
+	width: calc(50% - 10px);/*Вычисляем ширину элемента: половина родительского контейнера минус 10px*/
+	height: calc(95vw / 2 / 16*9); /*Вычисляем высоту элемента в сооотношении 16:9*/
+	margin: 10px;
+	transition: 0.8s;
+}
+
+
+
+@media all and (max-width: 768px) {
+	.img-link {
+		max-height: initial;
+		max-width: initial;
+		width: 95vw;
+		height: calc(95vw / 16 * 9);
+		margin: 5px 0;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	.img-link:hover {
+	transition: transform  0.8s ease-out, box-shadow 0.4s; /**/
+	transform: scale(1.2) rotate(5deg) ;	/*scale - - Масштабирование,
+								rotate - - Поворот в градусах */
+	box-shadow: 0 0 1000px 1000px rgba(0, 0, 0, 1)
+	}
+	.heading:hover {
+	opacity: 1s;
+	transition: 1s linear;
+	background: linear-gradient(45deg, lime, green)
+}
+	
+
+
+
+
+
