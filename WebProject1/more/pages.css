@@ -1,0 +1,79 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.header {
+	margin: auto;
+	width: 65%;
+	height: 125px;
+	display: flex;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.icon {
+	height: 80px;
+	width: 80px;
+	margin-top: 50px;
+}
+
+.main {
+	margin: auto;
+	height: 1000px;
+	width: 65%;
+}
+
+
+.h1 {
+	font-size: 50px;
+	position: absolute;
+	left: 110px;
+	bottom: -10px;
+
+}
+
+.p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.magimg {
+	height: 350px;
+	width: 400px;
+}
+.magbtn {
+	height: 40px;
+	width: 130px;
+	background-color: #00897b;
+	font-size: 1rem;
+			
+}
+
+.magbtn:hover {
+	transition: 0.3s ease-in;
+	height: 50px;
+	width: 150px;
+}
+
+.supportimg {
+	height: 350px;
+	width: 400px;
+}
+
+.plenkaimg {
+	height: 350px;
+	width: 400px;
+}
+.oplataimg {
+	height: 350px;
+	width: 400px;
+}
+
+.moneyimg {
+	height: 350px;
+	width: 400px;
+}
