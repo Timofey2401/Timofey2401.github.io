@@ -1,0 +1,31 @@
+#theme {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+body {
+	background: white;
+	color: black;
+}
+
+.btn {
+	background: orange;
+	color: red;
+	width: 60px;
+	height: 25px;
+	margin-left: 50px;
+
+}
+.btn:hover {
+	width: 100px;
+	height: 50px;
+	width:  75px;
+	transition: 1s ease-in;
+	transform: scale();
+	cursor: pointer;
+}
+
+.btn:after {
+	transition: 1s ease-in;
+}
