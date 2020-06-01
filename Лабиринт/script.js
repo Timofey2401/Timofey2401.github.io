@@ -1,4 +1,4 @@
-function mapGen(w, h, steps, complete) {
+function mapGen(w, h, steps, complete, time) {
 	// Функция отрисовки персонажа
 	function player(dx, dy){
 		// Получаем цвет пикселя из промежутка между ячейкой в которой стоит персонаж и той в сторону которой он передвигается.
@@ -34,7 +34,8 @@ function mapGen(w, h, steps, complete) {
 				$('body').append('Ты выйграл!')
 			}
 			else {
-				mapGen(w+5, h+5, 0, complete);
+				clearInterval(timerID)
+				mapGen(w+5, h+5, 0, complete, (w+h+10)*2);
 			}			
 		}
 	}
@@ -154,7 +155,35 @@ function mapGen(w, h, steps, complete) {
 			player(0, 1);
 		}
 	}
-
+	// Таймер
+	$('#time').text(time)
+	let timerID = setInterval(function() {
+		// Узнаём тек. время
+		let oldTime = +$('#time').text();
+		// Если время = 0
+		if (oldTime == 0) {
+			// Запускаем тот же лабиринт
+			mapGen(w, h, 0, complete, time)
+			// Удаляем тек. таймер
+			clearInterval(timerID)
+		}
+		else {
+		// Уменьшаем время на 1
+			let newTime = oldTime - 1;
+			// Вы водим новое время
+			$('#time').text(newTime)
+		}
+	}, 1000);
+}
+	
+function play() {
+	let width = +$('#width').val()
+	let height = +$('#height').val()
+	$('body').empty();
+	let startGame =  '<div class="stat">Шагов: <span id="steps">0</span> Пройдено лабиринтов:<span id="complete">0</span> Время: <span id="time"></span></div><canvas id="canv" style="background-color: dodgerblue"></canvas>';
+	$('body').append(startGame);
+	mapGen(width, height, 0, 0, (width + height)*2);
 }
 
-window.onload = mapGen(15, 15, 0, 0);
+
+

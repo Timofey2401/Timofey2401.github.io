@@ -5,23 +5,21 @@
 	<title>Лабиринт</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/21.0.1/jcanvas.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div class="stat">
-		Шагов: <span id="steps">0</span> Пройдено лабиринтов:<span id="complete">0</span>
-		<br>
-		Передвижение:
-		<br>
-		Вверх - w/ц , или стрелка вверх
-		<br>
-		Вниз - s/ы , или стрелка вниз
-		<br>
-		Вправо - d/в , или стрелка вправо
-		<br>
-		Влево - s/ф , или стрелка влево
-	</div>
-	<canvas id="canv" style="background-color: dodgerblue"></canvas>
-	<a href="index.html">Начать заново</a>
+	<h1>Лабиринт</h1>
+	<div class="div">
+		<label for="width">Ширина</label>
+		<span>х</span>
+		<label for="height">Высота</label>
+		<input id="width" type="range" min="5" max="100" value="5" oninput="$('#w').text(this.value)">
+		<span>х</span>
+		<input id="height" type="range" min="5" max="100" value="5" oninput="$('#h').text(this.value)">
+		<span id="w">5</span>
+		<button id="play" onclick="play()">Играть</button>
+		<span id="h">5</span>
+	</div>	
 	<script src="script.js"></script>
 </body>
 </html>
